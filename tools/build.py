@@ -77,7 +77,7 @@ KO["index"] = f"""
 <li>iPad와 Mac 양쪽에 <strong>같은 6자리 코드</strong>가 보이는지 확인합니다. 다르면 [거부]하세요.</li>
 <li>Mac 메뉴 막대의 ScreenHop Host 창에서 <strong>[허용]</strong>을 누릅니다.</li>
 </ol>
-<p>한 번 짝지으면 다음부터는 자동으로 연결됩니다. 짝짓기를 지우려면 Mac의 ScreenHop Host 메뉴 › 짝지은 iPad에서 [해제]하고, iPad에서는 앱 설정의 ‘페어링한 Mac’에서 잊기를 하세요. 해제하면 그 iPad는 다시 짝지어야 합니다.</p>
+<p>한 번 페어링하면 다음부터는 자동으로 연결됩니다. 페어링을 지우려면 Mac의 ScreenHop Host 메뉴 › 페어링된 iPad에서 [페어링 해제]하고, iPad에서는 앱 설정의 ‘페어링한 Mac’에서 잊기를 하세요. 해제하면 그 iPad는 다시 페어링해야 합니다.</p>
 
 <h2 id="wifi">같은 Wi-Fi</h2>
 <p>ScreenHop은 <strong>같은 Wi-Fi(같은 로컬 네트워크)</strong>의 iPad와 Mac을 직접 이어 줍니다. 인터넷을 거치는 중계 서버나 계정은 없습니다. 목록에 Mac이 보이지 않으면 아래 <a href="#trouble">문제 해결</a>을 확인하세요.</p>
@@ -88,7 +88,7 @@ KO["index"] = f"""
 <ol>
 <li>Mac과 iPad 모두에 Tailscale 등 VPN을 켭니다(같은 계정·같은 네트워크).</li>
 <li>iPad ScreenHop의 연결 목록에서 <strong>주소로 Mac 추가</strong>를 열고 Mac의 VPN 주소(IP 또는 호스트 이름)를 넣습니다.</li>
-<li>이후 짝짓기·연결은 같은 Wi-Fi일 때와 똑같습니다.</li>
+<li>이후 페어링·연결은 같은 Wi-Fi일 때와 똑같습니다.</li>
 </ol>
 <p class="muted">VPN은 이용자가 직접 설정해야 하며, ScreenHop은 VPN이나 인터넷 중계를 제공하지 않습니다. 내가 소유하거나 사용 권한이 있는 Mac에만 연결하세요.</p>
 
@@ -127,7 +127,7 @@ KO["index"] = f"""
 
 <h2 id="uninstall">지우는 방법</h2>
 <ul>
-<li><strong>iPad 앱</strong>: 홈 화면에서 ScreenHop을 길게 눌러 앱 삭제. 짝지은 Mac의 신뢰 키·SSH 정보까지 지우려면 삭제하기 전에 앱 설정의 ‘페어링한 Mac’, SSH 호스트·키 관리에서 먼저 지우세요.</li>
+<li><strong>iPad 앱</strong>: 홈 화면에서 ScreenHop을 길게 눌러 앱 삭제. 페어링한 Mac의 신뢰 키·SSH 정보까지 지우려면 삭제하기 전에 앱 설정의 ‘페어링한 Mac’, SSH 호스트·키 관리에서 먼저 지우세요.</li>
 <li><strong>Mac 도우미</strong>: <a href="download.html#uninstall">Mac 도우미 삭제 방법</a>을 보세요.</li>
 </ul>
 
@@ -165,10 +165,10 @@ KO["download"] = f"""
 </ol>
 <p>Mac이 잠겨 있으면 Mac에서 직접 잠금을 풀어야 합니다. 안 풀리거나 연결이 안 되면 <a href="index.html#trouble">문제 해결</a>을 보세요.</p>
 <h2>개인정보</h2>
-<p>화면·키 입력·클립보드는 암호화되어 로컬 네트워크로, 짝지은 iPad에만 전송됩니다. 개발사 서버로 보내는 것이 없고, 분석·광고 SDK도 없습니다. <a href="privacy.html">개인정보 처리방침</a></p>
+<p>화면·키 입력·클립보드는 암호화되어 로컬 네트워크로, 페어링된 iPad에만 전송됩니다. 개발사 서버로 보내는 것이 없고, 분석·광고 SDK도 없습니다. <a href="privacy.html">개인정보 처리방침</a></p>
 <h2 id="uninstall">지우는 방법</h2>
 <ol>
-<li>삭제 전에 메뉴 막대의 ScreenHop Host 메뉴 › <strong>짝지은 iPad</strong>에서 iPad를 [해제]합니다(짝짓기 키가 지워지며, 그 iPad는 다시 짝지어야 합니다).</li>
+<li>삭제 전에 메뉴 막대의 ScreenHop Host 메뉴 › <strong>페어링된 iPad</strong>에서 iPad를 [페어링 해제]합니다(페어링 키가 지워지며, 그 iPad는 다시 페어링해야 합니다).</li>
 <li>메뉴 막대에서 <strong>ScreenHop Host 종료</strong>를 누릅니다.</li>
 <li>응용 프로그램 폴더에서 ScreenHop Host를 휴지통으로 옮깁니다.</li>
 <li>시스템 설정 › 개인정보 보호 및 보안 › <strong>화면 기록</strong>, <strong>손쉬운 사용</strong>에서 ScreenHop Host 항목을 끄거나 제거합니다.</li>
@@ -196,7 +196,7 @@ KO["privacy"] = f"""
 <tr><td>기기 신원 키, 페어링한 Mac의 공개 키</td><td>암호화 연결, 다른 컴퓨터의 위장 방지</td><td>iPad Keychain(이 기기에만, iCloud 동기화 안 함)</td></tr>
 <tr><td>SSH 호스트 정보(이름·주소·포트·사용자)</td><td>터미널 연결</td><td>iPad 앱 데이터</td></tr>
 <tr><td>SSH 비밀번호·개인 키</td><td>SSH 인증</td><td>iPad Keychain(이 기기에만)</td></tr>
-<tr><td>Mac 도우미: Mac의 신원 키, 페어링한 iPad의 이름·공개 키, 설정</td><td>페어링한 iPad만 연결 허용, 암호화 연결</td><td>Mac Keychain(이 Mac에만)·Mac 앱 설정. 메뉴 막대 › 페어링한 iPad에서 해제하면 지워짐</td></tr>
+<tr><td>Mac 도우미: Mac의 신원 키, 페어링한 iPad의 이름·공개 키, 설정</td><td>페어링한 iPad만 연결 허용, 암호화 연결</td><td>Mac Keychain(이 Mac에만)·Mac 앱 설정. 메뉴 막대 › 페어링된 iPad에서 페어링 해제하면 지워짐</td></tr>
 <tr><td>설정</td><td>앱 기능</td><td>iPad 앱 데이터</td></tr></tbody></table>
 <p>이 정보는 회사로 전송되지 않습니다. 앱을 삭제하면 앱 데이터가 지워집니다(Keychain 항목은 iPadOS 정책에 따라 남을 수 있으며, 페어링한 Mac의 신뢰 키는 설정 › 페어링한 Mac에서 잊기로, SSH 비밀번호는 호스트 삭제로, SSH 개인 키는 터미널 › 키 관리에서 삭제로 지울 수 있습니다).</p>
 
