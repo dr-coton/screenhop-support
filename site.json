@@ -1,7 +1,10 @@
 {
   "_note": "게시 전에 이 파일만 고치고 `python3 -I tools/build.py` 를 실행하면 모든 페이지에 반영된다. 값이 '[확정 필요' 로 시작하면 화면에 자리표시 그대로 보인다.",
-  "contactEmail": "[확정 필요 — 지원 이메일]",
-  "effectiveDate": { "ko": "[확정 필요 — 출시일]", "en": "[To be confirmed — release date]" },
+  "contactEmail": "support@codeblack.co.kr",
+  "effectiveDate": {
+    "ko": "2026년 11월 15일",
+    "en": "November 15, 2026"
+  },
   "appStoreUrl": "",
   "host": {
     "version": "",

@@ -196,6 +196,7 @@ KO["privacy"] = f"""
 <tr><td>기기 신원 키, 페어링한 Mac의 공개 키</td><td>암호화 연결, 다른 컴퓨터의 위장 방지</td><td>iPad Keychain(이 기기에만, iCloud 동기화 안 함)</td></tr>
 <tr><td>SSH 호스트 정보(이름·주소·포트·사용자)</td><td>터미널 연결</td><td>iPad 앱 데이터</td></tr>
 <tr><td>SSH 비밀번호·개인 키</td><td>SSH 인증</td><td>iPad Keychain(이 기기에만)</td></tr>
+<tr><td>Mac 도우미: Mac의 신원 키, 페어링한 iPad의 이름·공개 키, 설정</td><td>페어링한 iPad만 연결 허용, 암호화 연결</td><td>Mac Keychain(이 Mac에만)·Mac 앱 설정. 메뉴 막대 › 페어링한 iPad에서 해제하면 지워짐</td></tr>
 <tr><td>설정</td><td>앱 기능</td><td>iPad 앱 데이터</td></tr></tbody></table>
 <p>이 정보는 회사로 전송되지 않습니다. 앱을 삭제하면 앱 데이터가 지워집니다(Keychain 항목은 iPadOS 정책에 따라 남을 수 있으며, 페어링한 Mac의 신뢰 키는 설정 › 페어링한 Mac에서 잊기로, SSH 비밀번호는 호스트 삭제로, SSH 개인 키는 터미널 › 키 관리에서 삭제로 지울 수 있습니다).</p>
 
@@ -381,6 +382,7 @@ EN["privacy"] = f"""
 <tr><td>Device identity key, public keys of paired Macs</td><td>Encrypted connections, preventing other computers from impersonating yours</td><td>iPad Keychain (this device only, not synced with iCloud)</td></tr>
 <tr><td>SSH host details (name, address, port, user)</td><td>Terminal connections</td><td>iPad app data</td></tr>
 <tr><td>SSH passwords and private keys</td><td>SSH authentication</td><td>iPad Keychain (this device only)</td></tr>
+<tr><td>Mac helper: the Mac’s identity key, paired iPads’ names and public keys, settings</td><td>Allow only paired iPads, encrypted connections</td><td>Mac Keychain (this Mac only) and app settings. Removed when you unpair the iPad from the menu bar › Paired iPads</td></tr>
 <tr><td>Settings</td><td>App features</td><td>iPad app data</td></tr></tbody></table>
 <p>This information is not sent to us. Deleting the app removes its data (Keychain items may remain under iPadOS policy; you can remove a paired Mac’s trust key with Forget under Settings › Paired Macs, SSH passwords by deleting the host, and SSH private keys under Terminal › Key management).</p>
 
