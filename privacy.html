@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<title>ScreenHop 개인정보 처리방침</title><meta name="description" content="ScreenHop은 개인정보를 수집하지 않습니다.">
+<link rel="canonical" href="https://dr-coton.com/screenhop-support/privacy.html"><link rel="alternate" hreflang="ko" href="https://dr-coton.com/screenhop-support/privacy.html"><link rel="alternate" hreflang="en" href="https://dr-coton.com/screenhop-support/en/privacy.html">
+<link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="style.css"></head>
+<body><header class="top"><div class="wrap bar"><a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="32" height="32"><span>ScreenHop</span></a>
+<nav aria-label="메뉴"><a href="index.html">지원</a><a href="download.html">Mac 도우미 받기</a><a href="privacy.html" aria-current="page">개인정보 처리방침</a><a lang="en" href="en/privacy.html">English</a></nav></div></header>
+<main class="wrap">
+<h1>ScreenHop 개인정보 처리방침</h1>
+<p class="muted">시행일: <span class="todo">[확정 필요 — 출시일]</span> · 버전 1.0</p>
+<p>Code Black Inc.(이하 “회사”)는 iPad 앱 ScreenHop과 Mac 도우미 ScreenHop Host(이하 “앱”)에서 이용자의 개인정보를 다음과 같이 처리합니다.</p>
+
+<h2>1. 수집하는 개인정보: 없음</h2>
+<ul>
+<li>앱은 개인정보를 수집하지 않으며, 회사 서버로 어떤 정보도 보내지 않습니다. 계정·회원가입이 없고, 회사가 운영하는 중계 서버도 없습니다.</li>
+<li>광고, 분석, 추적 SDK를 쓰지 않습니다. 앱 추적 투명성(ATT) 요청도 하지 않습니다.</li>
+<li><strong>Mac 화면 내용, 키보드·마우스·터치 입력, 클립보드, 소리, SSH 터미널 내용</strong>은 이용자의 iPad와 이용자의 Mac(또는 이용자가 지정한 SSH 서버) 사이에서만 암호화되어 오갑니다. 회사 서버로 수집하지 않으며, 세션 내용을 파일 등으로 영구 기록하지 않습니다(화면 표시를 위한 기기 메모리, 이용자가 직접 복사·붙여넣기한 내용은 예외).</li>
+</ul>
+
+<h2>2. 기기 안에만 저장되는 정보</h2>
+<table><thead><tr><th>항목</th><th>목적</th><th>위치</th></tr></thead><tbody>
+<tr><td>페어링한 Mac 이름·식별자, 직접 추가한 주소</td><td>연결 목록 표시, 자동 재연결</td><td>iPad 앱 데이터</td></tr>
+<tr><td>기기 신원 키, 페어링한 Mac의 공개 키</td><td>암호화 연결, 다른 컴퓨터의 위장 방지</td><td>iPad Keychain(이 기기에만, iCloud 동기화 안 함)</td></tr>
+<tr><td>SSH 호스트 정보(이름·주소·포트·사용자)</td><td>터미널 연결</td><td>iPad 앱 데이터</td></tr>
+<tr><td>SSH 비밀번호·개인 키</td><td>SSH 인증</td><td>iPad Keychain(이 기기에만)</td></tr>
+<tr><td>설정</td><td>앱 기능</td><td>iPad 앱 데이터</td></tr></tbody></table>
+<p>이 정보는 회사로 전송되지 않습니다. 앱을 삭제하면 앱 데이터가 지워집니다(Keychain 항목은 iPadOS 정책에 따라 남을 수 있으며, 페어링한 Mac의 신뢰 키는 설정 › 페어링한 Mac에서 잊기로, SSH 비밀번호는 호스트 삭제로, SSH 개인 키는 터미널 › 키 관리에서 삭제로 지울 수 있습니다).</p>
+
+<h2>3. 로컬 네트워크</h2>
+<p>같은 Wi-Fi의 Mac(및 SSH 기기)을 찾기 위해 iPadOS 로컬 네트워크 권한을 요청합니다. 찾은 기기 정보는 기기 안에서 목록 표시에만 씁니다.</p>
+
+<h2>4. 아동</h2>
+<p>앱은 아동을 대상으로 하지 않으며 아동의 정보를 수집하지 않습니다.</p>
+
+<h2>5. 문의</h2>
+<p>회사는 이용자를 식별할 수 있는 정보를 보관하지 않으므로 열람·삭제 요청 대상 정보가 회사에 없습니다.</p>
+<p>문의: <span class="todo">[확정 필요 — 지원 이메일]</span> · 지원: <a href="index.html">https://dr-coton.com/screenhop-support/</a></p>
+
+<h2>6. 변경</h2>
+<p>향후 광고 등 수집이 생기는 기능을 추가하면 앱 업데이트 전에 이 방침을 고치고 앱 안에서 알립니다.</p>
+</main>
+<footer class="wrap foot">Code Black Inc. · <span class="todo">[확정 필요 — 지원 이메일]</span></footer></body></html>

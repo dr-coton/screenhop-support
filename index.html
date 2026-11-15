@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<title>ScreenHop 지원 · 자주 묻는 질문</title><meta name="description" content="ScreenHop(iPad용 Mac 원격 화면·SSH 터미널) 설치, 권한, 연결, 문제 해결 안내.">
+<link rel="canonical" href="https://dr-coton.com/screenhop-support/"><link rel="alternate" hreflang="ko" href="https://dr-coton.com/screenhop-support/"><link rel="alternate" hreflang="en" href="https://dr-coton.com/screenhop-support/en/">
+<link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="style.css"></head>
+<body><header class="top"><div class="wrap bar"><a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="32" height="32"><span>ScreenHop</span></a>
+<nav aria-label="메뉴"><a href="index.html" aria-current="page">지원</a><a href="download.html">Mac 도우미 받기</a><a href="privacy.html">개인정보 처리방침</a><a lang="en" href="en/">English</a></nav></div></header>
+<main class="wrap">
+<h1>ScreenHop 지원</h1>
+<p class="lead">iPad에서 <strong>내 Mac</strong>을 매끄럽게 쓰는 원격 화면 앱, 그리고 같은 앱 안의 SSH 터미널. 무료이며 광고가 없습니다.</p>
+<div class="card"><p><strong>문의</strong><br>Code Black Inc.<br><span class="todo">[확정 필요 — 지원 이메일]</span></p>
+<p class="muted">문의할 때 비밀번호나 화면 속 개인 정보는 보내지 마세요. 어떤 기기·버전에서 무슨 일이 있었는지 적어 주시면 빨리 도와드릴 수 있어요.</p></div>
+<nav class="toc" aria-label="이 페이지의 항목"><ul>
+<li><a href="#start">처음 시작하기</a></li><li><a href="#permissions">권한 3가지</a></li><li><a href="#pairing">처음 연결할 때</a></li>
+<li><a href="#wifi">같은 Wi-Fi</a></li><li><a href="#outside">밖에서 쓰기 (Tailscale 등)</a></li><li><a href="#lock">Mac 화면이 잠겼을 때</a></li>
+<li><a href="#trouble">문제 해결</a></li><li><a href="#data">내 화면 정보는 어디로 가나요?</a></li><li><a href="#uninstall">지우는 방법</a></li></ul></nav>
+
+<h2 id="start">처음 시작하기</h2>
+<p>두 가지가 필요합니다. <strong>iPad의 ScreenHop 앱</strong>과 <strong>Mac의 무료 도우미 ScreenHop Host</strong>입니다. Mac 쪽 도우미가 화면을 iPad로 보내 주고 iPad의 입력을 받아 줍니다.</p>
+<ol>
+<li>Mac에 ScreenHop Host를 설치합니다. → <a href="download.html">Mac 도우미 받기·설치 안내</a> (macOS 14 이상)</li>
+<li>iPad와 Mac을 <strong>같은 Wi-Fi</strong>에 둡니다.</li>
+<li>iPad에서 ScreenHop을 열고 목록의 내 Mac을 누릅니다. 양쪽 화면에 같은 6자리 코드가 보이면 Mac에서 [허용]을 누릅니다.</li>
+</ol>
+<p>Mac이 없어도 연결 목록의 <strong>데모로 둘러보기</strong>(Mac 없이 둘러보기)로 화면 구성을 미리 볼 수 있습니다.</p>
+
+<h2 id="permissions">권한 3가지</h2>
+<p>Mac에서 2개, iPad에서 1개를 허용해야 합니다. 모두 언제든 시스템 설정에서 바꿀 수 있습니다.</p>
+<table><thead><tr><th>어디서</th><th>권한</th><th>왜 필요한가요</th></tr></thead><tbody>
+<tr><td>Mac</td><td>화면 기록</td><td>iPad가 이 Mac의 화면을 볼 수 있게 합니다. 허용한 뒤 macOS가 ScreenHop Host를 다시 열라고 할 수 있습니다.</td></tr>
+<tr><td>Mac</td><td>손쉬운 사용</td><td>iPad로 이 Mac의 포인터 이동·클릭·입력을 할 수 있게 합니다.</td></tr>
+<tr><td>iPad</td><td>로컬 네트워크</td><td>같은 Wi-Fi에 있는 내 Mac(과 SSH 기기)을 찾는 데 씁니다.</td></tr></tbody></table>
+<p>Mac: 시스템 설정 › 개인정보 보호 및 보안 › <strong>화면 기록</strong> / <strong>손쉬운 사용</strong>에서 ScreenHop Host를 켭니다. ScreenHop Host를 처음 열면 안내 창이 이 설정을 열어 줍니다.<br>iPad: 설정 › ScreenHop › <strong>로컬 네트워크</strong>를 켭니다.</p>
+
+<h2 id="pairing">처음 연결할 때</h2>
+<ol>
+<li>iPad에서 목록의 Mac을 누릅니다.</li>
+<li>iPad와 Mac 양쪽에 <strong>같은 6자리 코드</strong>가 보이는지 확인합니다. 다르면 [거부]하세요.</li>
+<li>Mac 메뉴 막대의 ScreenHop Host 창에서 <strong>[허용]</strong>을 누릅니다.</li>
+</ol>
+<p>한 번 짝지으면 다음부터는 자동으로 연결됩니다. 짝짓기를 지우려면 Mac의 ScreenHop Host 메뉴 › 짝지은 iPad에서 [해제]하고, iPad에서는 앱 설정의 ‘페어링한 Mac’에서 잊기를 하세요. 해제하면 그 iPad는 다시 짝지어야 합니다.</p>
+
+<h2 id="wifi">같은 Wi-Fi</h2>
+<p>ScreenHop은 <strong>같은 Wi-Fi(같은 로컬 네트워크)</strong>의 iPad와 Mac을 직접 이어 줍니다. 인터넷을 거치는 중계 서버나 계정은 없습니다. 목록에 Mac이 보이지 않으면 아래 <a href="#trouble">문제 해결</a>을 확인하세요.</p>
+<p class="muted">USB 케이블 연결은 지금 지원하지 않습니다.</p>
+
+<h2 id="outside">밖에서 쓰기 (Tailscale 등 VPN)</h2>
+<p>집 밖에서는 <strong>Tailscale</strong> 같은 VPN을 직접 설정해 쓸 수 있습니다. 목록에 자동으로 나타나지 않으므로 Mac의 주소(Tailscale IP, 예: 100.x.x.x)를 iPad에서 <strong>직접 입력</strong>해 추가하세요.</p>
+<ol>
+<li>Mac과 iPad 모두에 Tailscale 등 VPN을 켭니다(같은 계정·같은 네트워크).</li>
+<li>iPad ScreenHop의 연결 목록에서 <strong>주소로 Mac 추가</strong>를 열고 Mac의 VPN 주소(IP 또는 호스트 이름)를 넣습니다.</li>
+<li>이후 짝짓기·연결은 같은 Wi-Fi일 때와 똑같습니다.</li>
+</ol>
+<p class="muted">VPN은 이용자가 직접 설정해야 하며, ScreenHop은 VPN이나 인터넷 중계를 제공하지 않습니다. 내가 소유하거나 사용 권한이 있는 Mac에만 연결하세요.</p>
+
+<h2 id="lock">Mac 화면이 잠겼을 때</h2>
+<p>ScreenHop은 <strong>Mac에 사용자가 로그인해 있는 상태</strong>에서 동작합니다. Mac이 잠기거나 로그인 화면이면 iPad에서 풀 수 없고, <strong>Mac에서 직접 잠금을 풀어야</strong> 합니다. 이는 보안을 위한 macOS의 제한입니다. 잠금이 풀리면 연결이 이어집니다.</p>
+<p>자리를 비우기 전에 Mac이 잠자기·잠금으로 들어가는 것이 걱정되면 Mac 메뉴 막대의 ScreenHop Host 메뉴에서 ‘연결 중 Mac 잠자기 방지’를 켜 두세요.</p>
+
+<h2 id="trouble">문제 해결</h2>
+<h3>목록에 내 Mac이 보이지 않아요</h3>
+<ul>
+<li>Mac에서 ScreenHop Host가 실행 중인지 확인하세요. 메뉴 막대에 아이콘이 있어야 하고, 메뉴에 ‘같은 Wi-Fi의 iPad를 기다리는 중’이 보입니다.</li>
+<li>iPad와 Mac이 <strong>같은 Wi-Fi</strong>인지 확인하세요. 게스트 Wi-Fi나 공유기의 ‘기기 간 격리(AP 격리)’가 켜져 있으면 서로 보이지 않을 수 있습니다.</li>
+<li>iPad 설정 › ScreenHop › <strong>로컬 네트워크</strong>가 켜져 있는지 확인하세요.</li>
+<li>VPN(Tailscale 등)을 쓰는 중이면 목록에 나오지 않습니다. Mac 주소를 직접 입력해 추가하세요(주소로 Mac 추가).</li>
+<li>그래도 안 되면 Mac의 ScreenHop Host를 종료했다가 다시 열고, iPad 앱도 다시 열어 보세요.</li>
+</ul>
+<h3>연결은 됐는데 화면이 검게 보이거나 안 보여요</h3>
+<p>Mac의 시스템 설정 › 개인정보 보호 및 보안 › <strong>화면 기록</strong>에서 ScreenHop Host가 켜져 있는지 확인하세요. 방금 켰다면 ScreenHop Host를 다시 열어야 적용될 수 있습니다. Mac이 잠겨 있지는 않은지도 확인하세요.</p>
+<h3>화면은 보이는데 클릭·입력이 안 돼요</h3>
+<p>시스템 설정 › 개인정보 보호 및 보안 › <strong>손쉬운 사용</strong>에서 ScreenHop Host를 켜세요. 비밀번호 입력란처럼 macOS가 ‘보안 입력’으로 보호하는 곳에서는 일부 입력이 막힐 수 있습니다.</p>
+<h3>“Mac 도우미를 업데이트하세요”라고 떠요</h3>
+<p>iPad 앱과 Mac 도우미의 연결 규격(프로토콜) 버전이 달라서입니다. <a href="download.html">Mac 도우미 페이지</a>에서 최신 ScreenHop Host를 받아 설치하세요. 반대로 도우미가 더 새로우면 iPad 앱을 업데이트하세요.</p>
+<h3>연결이 느리거나 자주 끊겨요</h3>
+<ul>
+<li>iPad와 Mac(또는 공유기) 사이의 Wi-Fi 신호를 확인하세요. 가능하면 같은 5GHz Wi-Fi에 두세요.</li>
+<li>Mac이 잠자기에 들어가지 않았는지 확인하세요.</li>
+<li>Mac 메뉴 막대의 ScreenHop Host 메뉴에서 화질·프레임 설정(지연·균형·데이터 절약 등)을 바꿔 볼 수 있습니다.</li>
+</ul>
+<h3>한/영 전환은 어떻게 하나요?</h3>
+<p>입력 소스 전환은 Mac의 입력기가 처리합니다. Mac에서 쓰는 전환 키(예: Caps Lock, Control+Space)를 그대로 쓰세요.</p>
+<h3>그래도 해결되지 않아요</h3>
+<p>iPad 모델·iPadOS 버전, Mac 모델·macOS 버전, 같은 Wi-Fi인지 여부, 어느 단계에서 멈추는지를 적어 <a href="#contact">문의</a>해 주세요.</p>
+
+<h2 id="data">내 화면 정보는 어디로 가나요?</h2>
+<p>회사 서버로 가지 않습니다. 화면·키 입력·클립보드·터미널 내용은 <strong>내 iPad와 내 Mac(또는 내가 지정한 SSH 서버) 사이에서만 암호화되어</strong> 오갑니다. 계정이 없고, 광고·분석·추적 SDK도 없습니다. 자세한 내용은 <a href="privacy.html">개인정보 처리방침</a>을 보세요.</p>
+
+<h2 id="uninstall">지우는 방법</h2>
+<ul>
+<li><strong>iPad 앱</strong>: 홈 화면에서 ScreenHop을 길게 눌러 앱 삭제. 짝지은 Mac의 신뢰 키·SSH 정보까지 지우려면 삭제하기 전에 앱 설정의 ‘페어링한 Mac’, SSH 호스트·키 관리에서 먼저 지우세요.</li>
+<li><strong>Mac 도우미</strong>: <a href="download.html#uninstall">Mac 도우미 삭제 방법</a>을 보세요.</li>
+</ul>
+
+<h2 id="contact">문의</h2>
+<p>Code Black Inc. · <span class="todo">[확정 필요 — 지원 이메일]</span></p>
+</main>
+<footer class="wrap foot">Code Black Inc. · <span class="todo">[확정 필요 — 지원 이메일]</span></footer></body></html>

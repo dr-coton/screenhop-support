@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<title>ScreenHop Support · FAQ</title><meta name="description" content="Setup, permissions, connecting and troubleshooting for ScreenHop (Mac remote screen and SSH terminal for iPad).">
+<link rel="canonical" href="https://dr-coton.com/screenhop-support/en/"><link rel="alternate" hreflang="ko" href="https://dr-coton.com/screenhop-support/"><link rel="alternate" hreflang="en" href="https://dr-coton.com/screenhop-support/en/">
+<link rel="icon" href="../assets/icon.png"><link rel="stylesheet" href="../style.css"></head>
+<body><header class="top"><div class="wrap bar"><a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="32" height="32"><span>ScreenHop</span></a>
+<nav aria-label="Menu"><a href="index.html" aria-current="page">Support</a><a href="download.html">Get the Mac helper</a><a href="privacy.html">Privacy policy</a><a lang="ko" href="../">한국어</a></nav></div></header>
+<main class="wrap">
+<h1>ScreenHop Support</h1>
+<p class="lead">A remote-screen app that lets you use <strong>your own Mac</strong> smoothly from your iPad, with an SSH terminal in the same app. Free, no ads.</p>
+<div class="card"><p><strong>Contact</strong><br>Code Black Inc.<br><span class="todo">[확정 필요 — 지원 이메일]</span></p>
+<p class="muted">Please don’t send passwords or personal information shown on your screen. Tell us your device, versions and what happened so we can help quickly.</p></div>
+<nav class="toc" aria-label="On this page"><ul>
+<li><a href="#start">Getting started</a></li><li><a href="#permissions">The 3 permissions</a></li><li><a href="#pairing">Connecting the first time</a></li>
+<li><a href="#wifi">Same Wi-Fi</a></li><li><a href="#outside">Away from home (Tailscale, VPN)</a></li><li><a href="#lock">When the Mac is locked</a></li>
+<li><a href="#trouble">Troubleshooting</a></li><li><a href="#data">Where does my screen data go?</a></li><li><a href="#uninstall">Removing ScreenHop</a></li></ul></nav>
+
+<h2 id="start">Getting started</h2>
+<p>You need two things: the <strong>ScreenHop app on your iPad</strong> and the free <strong>ScreenHop Host helper on your Mac</strong>. The helper sends the Mac’s screen to the iPad and receives your input.</p>
+<ol>
+<li>Install ScreenHop Host on your Mac. → <a href="download.html">Get the Mac helper · install guide</a> (macOS 14 or later)</li>
+<li>Put the iPad and the Mac on the <strong>same Wi-Fi</strong>.</li>
+<li>Open ScreenHop on the iPad and tap your Mac in the list. When both screens show the same 6-digit code, click Allow on the Mac.</li>
+</ol>
+<p>No Mac at hand? Use <strong>Explore the demo</strong> (Explore Without a Mac) on the connection list to preview the screens.</p>
+
+<h2 id="permissions">The 3 permissions</h2>
+<p>You allow two on the Mac and one on the iPad. You can change any of them later in System Settings.</p>
+<table><thead><tr><th>Where</th><th>Permission</th><th>Why it is needed</th></tr></thead><tbody>
+<tr><td>Mac</td><td>Screen Recording</td><td>Lets the iPad see this Mac’s screens. After allowing, macOS may ask you to reopen ScreenHop Host.</td></tr>
+<tr><td>Mac</td><td>Accessibility</td><td>Lets the iPad move the pointer, click and type on this Mac.</td></tr>
+<tr><td>iPad</td><td>Local Network</td><td>Used to find your Mac (and SSH machines) on the same Wi-Fi.</td></tr></tbody></table>
+<p>Mac: turn on ScreenHop Host under System Settings › Privacy &amp; Security › <strong>Screen Recording</strong> and <strong>Accessibility</strong>. The setup window that appears the first time you open ScreenHop Host takes you there.<br>iPad: Settings › ScreenHop › turn on <strong>Local Network</strong>.</p>
+
+<h2 id="pairing">Connecting the first time</h2>
+<ol>
+<li>Tap your Mac in the iPad’s list.</li>
+<li>Check that the iPad and the Mac show the <strong>same 6-digit code</strong>. If they differ, choose Deny.</li>
+<li>In the ScreenHop Host window from the Mac’s menu bar, click <strong>Allow</strong>.</li>
+</ol>
+<p>After you pair once, the iPad connects automatically next time. To undo pairing, choose Remove under Paired iPads in the ScreenHop Host menu on the Mac, and forget the Mac under “Paired Macs” in the iPad app’s settings. A removed iPad has to pair again.</p>
+
+<h2 id="wifi">Same Wi-Fi</h2>
+<p>ScreenHop connects an iPad and a Mac directly on the <strong>same Wi-Fi (same local network)</strong>. There is no internet relay server and no account. If your Mac isn’t listed, see <a href="#trouble">Troubleshooting</a>.</p>
+<p class="muted">Connecting by USB cable is not supported at the moment.</p>
+
+<h2 id="outside">Away from home (Tailscale or another VPN)</h2>
+<p>Away from home you can set up a VPN such as <strong>Tailscale</strong> yourself. The Mac won’t appear in the list automatically, so <strong>type its address</strong> (its Tailscale IP, e.g. 100.x.x.x) into the iPad.</p>
+<ol>
+<li>Turn on Tailscale or your VPN on both the Mac and the iPad (same account / same network).</li>
+<li>On the connection list in ScreenHop, open <strong>Add Mac by Address</strong> and enter the Mac’s VPN address (IP or host name).</li>
+<li>Pairing and connecting then work the same as on the same Wi-Fi.</li>
+</ol>
+<p class="muted">You set up the VPN yourself; ScreenHop does not provide a VPN or an internet relay. Connect only to Macs you own or are allowed to use.</p>
+
+<h2 id="lock">When the Mac is locked</h2>
+<p>ScreenHop works while <strong>a user is logged in on the Mac</strong>. If the Mac is locked or at the login screen, you can’t unlock it from the iPad — <strong>unlock it at the Mac itself</strong>. This is a macOS security limit. Once it is unlocked, the connection continues.</p>
+<p>If you’re worried about the Mac sleeping or locking while you’re away, turn on “Keep Mac awake while connected” in the ScreenHop Host menu on the Mac.</p>
+
+<h2 id="trouble">Troubleshooting</h2>
+<h3>My Mac isn’t in the list</h3>
+<ul>
+<li>Check that ScreenHop Host is running on the Mac. Its icon should be in the menu bar, and the menu says “Waiting for iPad on this Wi-Fi”.</li>
+<li>Check that the iPad and Mac are on the <strong>same Wi-Fi</strong>. A guest network, or a router’s “client/AP isolation” setting, can keep devices from seeing each other.</li>
+<li>Check Settings › ScreenHop › <strong>Local Network</strong> on the iPad.</li>
+<li>If you use a VPN (Tailscale, etc.), the Mac won’t be listed. Type its address.</li>
+<li>Still nothing? Quit and reopen ScreenHop Host on the Mac, and reopen the iPad app.</li>
+</ul>
+<h3>It connects, but the screen is black or blank</h3>
+<p>On the Mac, check that ScreenHop Host is turned on under System Settings › Privacy &amp; Security › <strong>Screen Recording</strong>. If you just turned it on, reopen ScreenHop Host. Also make sure the Mac isn’t locked.</p>
+<h3>I can see the screen but clicks and typing do nothing</h3>
+<p>Turn on ScreenHop Host under System Settings › Privacy &amp; Security › <strong>Accessibility</strong>. Some input can be blocked where macOS protects “secure input”, such as password fields.</p>
+<h3>It says “Update the Mac helper”</h3>
+<p>The iPad app and the Mac helper use different connection (protocol) versions. Get the latest ScreenHop Host from the <a href="download.html">Mac helper page</a> and install it. If the helper is newer instead, update the iPad app.</p>
+<h3>It’s slow or keeps disconnecting</h3>
+<ul>
+<li>Check the Wi-Fi signal between the iPad and the Mac (or router). Prefer the same 5 GHz network if you can.</li>
+<li>Make sure the Mac hasn’t gone to sleep.</li>
+<li>In the ScreenHop Host menu on the Mac you can try the picture and frame-rate settings (Latency, Balanced, Data saver, and so on).</li>
+</ul>
+<h3>How do I switch between Korean and English input?</h3>
+<p>Input-source switching is handled by the Mac’s input methods. Use the same switch key you use on the Mac (for example Caps Lock or Control-Space).</p>
+<h3>Still stuck?</h3>
+<p>Tell us your iPad model and iPadOS version, your Mac model and macOS version, whether they are on the same Wi-Fi, and where it stops, then <a href="#contact">contact us</a>.</p>
+
+<h2 id="data">Where does my screen data go?</h2>
+<p>Not to our servers. Your screen, keystrokes, clipboard and terminal contents travel <strong>encrypted, only between your iPad and your Mac (or the SSH server you choose)</strong>. There are no accounts, and no ad, analytics or tracking SDKs. See the <a href="privacy.html">privacy policy</a>.</p>
+
+<h2 id="uninstall">Removing ScreenHop</h2>
+<ul>
+<li><strong>iPad app</strong>: touch and hold ScreenHop on the Home Screen and delete the app. To also clear stored Mac trust keys and SSH details, remove them first under “Paired Macs” and the SSH host and key management screens in the app’s settings.</li>
+<li><strong>Mac helper</strong>: see <a href="download.html#uninstall">how to remove the Mac helper</a>.</li>
+</ul>
+
+<h2 id="contact">Contact</h2>
+<p>Code Black Inc. · <span class="todo">[확정 필요 — 지원 이메일]</span></p>
+</main>
+<footer class="wrap foot">Code Black Inc. · <span class="todo">[확정 필요 — 지원 이메일]</span></footer></body></html>
